@@ -12,11 +12,10 @@ bash ./bin/install.sh
 ```sh
 # for coc
 cp ~/.thinkvim.d/coc/coc-settings.json ~/.config/nvim
-mkdir ~/.config/coc/extensions/coc-todolist-data
 
 # for coc-todolist
-cp ~/.thinkvim.d/todo-list/config.json
-~/.config/coc/extensions/coc-todolist-data
+mkdir ~/.config/coc/extensions/coc-todolist-data
+cp ~/.thinkvim.d/todo-list/config.json ~/.config/coc/extensions/coc-todolist-data
 ```
 
 ## 增加的插件
