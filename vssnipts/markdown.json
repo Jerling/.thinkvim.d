@@ -1,0 +1,116 @@
+{
+	// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Hugo head": {
+		"prefix": "hugo_head",
+		"body": [
+			"+++",
+			"title = \"$1\"",
+			"author = [\"Jerling\"]",
+			"description = \"$2\"",
+			"date = $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND+08:00",
+			"lastmod = $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND+08:00",
+			"tags = [\"$4\", \"$5\", \"$6\"]",
+			"categories = [\"$7\"]",
+			"type = \"post\"",
+			"draft = false",
+			"author_homepage = \"https://github.com/Jerling\"",
+			"toc = \"true\"",
+			"+++\n\n# $8"
+		]
+	},
+	"insert figure src": {
+		"prefix": "hugo_figure",
+		"body": "{{< figure src=\"/images/$1.png\" >}}\n"
+	},
+	"head 1": {
+		"prefix": "h1",
+		"body": "# $1\n"
+	},
+	"head 2": {
+		"prefix": "h2",
+		"body": "## $1\n"
+	},
+	"head 3": {
+		"prefix": "h3",
+		"body": "### $1\n"
+	},
+	"head 4": {
+		"prefix": "h4",
+		"body": "#### $1\n"
+	},
+	"head 5": {
+		"prefix": "h5",
+		"body": "##### $1\n"
+	},
+	"code bock": {
+		"prefix": "code_block",
+		"body": "```$1\n$2\n```\n$3"
+	},
+	"code line": {
+		"prefix": "code_line",
+		"body": "`$1` $2"
+	},
+	"insert date": {
+		"prefix": "date",
+		"body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
+	},
+	"insert time": {
+		"prefix": "time",
+		"body": "$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND"
+	},
+	"refrence link": {
+		"prefix": "refrence_link",
+		"body": "[$1]($1)\n\n$2"
+	},
+	"link": {
+		"prefix": "link",
+		"body": "[$1]($2)"
+	},
+	"img": {
+		"prefix": "images",
+		"body": "![]($1)"
+	},
+	"ppt head": {
+		"prefix": "ppt_head",
+		"body": [
+				"---",
+				"theme : \"solarized\"",
+				"transition: \"slide\"",
+				"highlightTheme: \"monokai\"",
+				"slideNumber: true",
+				"title: \"$1\"",
+				"tags:",
+				"  - $2",
+				"---",
+				"\n\n$3"
+		]
+	},
+	"new slide": {
+		"prefix": "new_slide",
+		"body": [
+			"## $1",
+			"\n$2",
+			"\n---"
+		]
+	},
+	"vertical slide": {
+		"prefix": "v_slide",
+		"body": [
+			"## $1",
+			"\n$2",
+			"\n--"
+		]
+	}
+}
