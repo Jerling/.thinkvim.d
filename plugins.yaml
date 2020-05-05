@@ -1,12 +1,17 @@
 - repo: skywind3000/asyncrun.vim
-  on_cmd: AsyncRun
+  on_cmd: [AsyncRun]
   hook_add: |
-    let g:asyncrun_open = 8
+    let g:asyncrun_open = 10
 
 - repo: skywind3000/asynctasks.vim
-  on_cmd: [AsyncTask, AsyncTaskList]
+  on_ft: [startify]
   hook_add: |
-    let g:asynctasks_term_pos = 'bottom'
+    let g:asynctasks_term_rows = 10
+    let g:asynctasks_term_cols = 80
+    let g:asynctasks_term_pos = 'right'
     let g:asynctasks_extra_config = [
       \'~/.thinkvim.d/tasks/tasks.ini',
+      \'~/.thinkvim.d/tasks/life.ini',
       \]
+
+- repo: dracula/vim

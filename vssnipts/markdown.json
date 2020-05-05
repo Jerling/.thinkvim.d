@@ -85,16 +85,16 @@
 	"ppt head": {
 		"prefix": "ppt_head",
 		"body": [
-				"---",
-				"theme : \"solarized\"",
-				"transition: \"slide\"",
-				"highlightTheme: \"monokai\"",
-				"slideNumber: true",
-				"title: \"$1\"",
-				"tags:",
-				"  - $2",
-				"---",
-				"\n\n$3"
+			"---",
+			"theme : \"solarized\"",
+			"transition: \"slide\"",
+			"highlightTheme: \"monokai\"",
+			"slideNumber: true",
+			"title: \"$1\"",
+			"tags:",
+			"  - $2",
+			"---",
+			"\n\n$3"
 		]
 	},
 	"new slide": {
@@ -111,6 +111,20 @@
 			"## $1",
 			"\n$2",
 			"\n--"
+		]
+	},
+	"kpt": {
+		"prefix": "kpt",
+		"body": [
+			"## 今天所执行之事",
+			"1. ${1}",
+			"",
+			"## 今日遇到的问题",
+			"1. ${2}",
+			"",
+			"## 明天可尝试的方案",
+			"1. ${3}",
+			""
 		]
 	}
 }
