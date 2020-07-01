@@ -5,7 +5,7 @@
 git clone --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
 git clone https://github.com/Jerling/.thinkvim.d ~/.thinkvim.d
 cd ~/.config/nvim
-bash ./bin/install.sh
+bash ./scripts/install.sh
 ```
 
 **个人相关的配置**
@@ -19,13 +19,12 @@ cp ~/.thinkvim.d/todo-list/config.json ~/.config/coc/extensions/coc-todolist-dat
 ```
 
 ## 增加的插件
-vim:
++ vim:
 	- [AsyncTask](https://github.com/skywind3000/asynctasks.vim)
 	- [AsyncRun](https://github.com/skywind3000/asyncrun.vim)
 
-coc:
++ coc:
 	- coc-marketplace
-	- coc-explorer
 	- coc-snippets
 	- coc-todolist
 	- coc-tasks
