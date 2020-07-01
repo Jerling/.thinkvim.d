@@ -7,7 +7,7 @@ let g:coc_explorer_global_presets = {
 \      'position': 'floating',
 \   },
 \   'Blog': {
-\      'root-uri': '~/jerling.github.io/content/post',
+\      'root-uri': '~/blog/content/post',
 \      'position': 'floating',
 \   },
 \   'snippets': {
@@ -36,9 +36,6 @@ call coc#config('languageserver', {
 	\ }
 	\})
 
-" 设置主题颜色
-colorscheme dracula
-
 " 自定义快捷键
 " 增加退出插入模式快捷键
 inoremap jk <ESC>
@@ -64,13 +61,16 @@ nnoremap <Leader>tl :CocList tasks<CR>
 nnoremap <Leader>cm :CocList marketplace<CR>
 
 " emacs 绑定
-inoremap <C-x><C-x> <ESC>:wq<CR>
+nnoremap <C-x><C-x> :call QuitVim()<CR>
+inoremap <C-x><C-c> <ESC>:call QuitVim()<CR>
 inoremap <C-x><C-u> <ESC>:q!<CR>
-nnoremap <C-x><C-x> <ESC>:wq<CR>
-nnoremap <C-x><C-u> <ESC>:q!<CR>
+inoremap <C-x>h			<ESC>ggVG
+nnoremap <C-x><C-x> :call QuitVim()<CR>
+nnoremap <C-x><C-c> :call QuitVim()<CR>
+nnoremap <C-x><C-u> :q!<CR>
 nnoremap <C-x>h			ggVG
 
-" 不知道为啥，在 Arch Linx 上无法注册，先过滤掉吧
+" 不知道为啥，在 Arch Linux 上无法注册，先过滤掉吧
 let s:dist=system(" cat /etc/issue | awk '{printf $1}'")
 if !(s:dist == "Arch")
 	" register to which key
